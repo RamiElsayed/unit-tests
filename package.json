@@ -1,14 +1,17 @@
 {
-  "name": "02-stu_tdd",
+  "name": "unit-tests",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watch"
+    "test": "jest --verbose",
+    "test:watch": "jest --verbose --watch"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "jest": "^24.9.0"
+    "@types/jest": "^28.1.2",
+    "jest": "^28.1.1"
   }
 }

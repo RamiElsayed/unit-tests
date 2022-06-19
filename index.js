@@ -1,4 +1,4 @@
-const Algo = require("./algo");
+const Algo = require("./Algo");
 
 const algo = new Algo();
 

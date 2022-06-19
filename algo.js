@@ -1,16 +1,30 @@
-function Algo() {}
+class Algo {
+  constructor() {}
 
-Algo.prototype.reverse = function(str) {
-    return str.split("").reverse().join('');
-};
+  reverse(string = "") {
+    return [...string].reverse().join("");
+  }
 
-Algo.prototype.isPalindrome = function(str) {
-    const reverse = new Algo().reverse(str)
-    return reverse === str;
-};
+  isPalindrome(string) {
+    if (!string) {
+      return false;
+    }
+    return (
+      string.replace(/\s+/g, "") === this.reverse(string.replace(/\s+/g, ""))
+    );
+  }
 
-Algo.prototype.capitalize = function(str) {
-    return str.slice(0, 1).toUpperCase() + str.slice(1);
-};
-
+  capitalised(string = '') {
+    if (string) {
+        return string
+      .toLowerCase()
+      .split(' ')
+      .map((word) => {
+        const [firstLetter, ...rest] = word;
+        return [firstLetter.toUpperCase(), ...rest].join('');
+      }).join(' ');
+    }
+    return string;
+  }
+}
 module.exports = Algo;
